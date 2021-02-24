@@ -1,0 +1,12 @@
+<h1>Articles</h1>
+
+<ul>
+  {{#each articles}}
+  <div>
+    <li class="article-title">Title: {{this.title}}</li>
+    <li class="article-description">Description: {{this.description}}</li>
+    <li class="article-link"><a href={{this.url}} target="_blank" rel="noopener noreferrer">{{this.url}}</a></li>
+  </div>
+  <br>
+  {{/each}}
+</ul>
