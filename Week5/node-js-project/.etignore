@@ -1,0 +1,13 @@
+# List of files and directories to ignore during et submit
+# Note: node_modules is automatically ignored by et and
+# does not need to be listed here
+
+# Example:
+# somedir/
+
+node-js-project.md
+babel.config.json
+node_modules/
+package.json
+src/__tests__
+yarn.lock

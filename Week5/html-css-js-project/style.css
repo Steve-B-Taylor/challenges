@@ -1,0 +1,152 @@
+body {
+  font-size: 16px;
+  color: #030303;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#summary-section {
+  font-weight: bold;
+}
+
+h3 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  padding: 10px;
+}
+
+.squishy {
+  display: inline-block;
+  text-align: left;
+}
+
+#squish-summary {
+  min-width: 50px;
+}
+
+.normal-text {
+  font-weight: normal;
+}
+
+#main-content {
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.section-container {
+  background-color: #6f7272;
+}
+
+#main-content section {
+  text-align: center;
+  font-size: 1.5em;
+  padding-bottom: 20px;
+}
+
+.title-bar {
+  width: 100%;
+  z-index: 10;
+  transition: height 0.25s ease;
+  height: 4.5em;
+}
+.title-bar .title-bar-right,
+.title-bar .title-bar-left {
+  transition: padding-top 0.25s ease;
+  padding-top: 1.4em;
+}
+.title-bar.shrink {
+  height: 3em;
+}
+.title-bar.shrink .title-bar-right,
+.title-bar.shrink .title-bar-left {
+  padding-top: 0em;
+}
+.title-bar .dropdown.menu li {
+  float: left;
+}
+.title-bar .dropdown.menu .is-dropdown-submenu {
+  border: none;
+  background-color: #0a0a0a;
+}
+#root {
+  margin-top: 2em;
+}
+
+/* footer */
+
+.sticky-footer-css {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sticky-footer-css-body {
+  overflow: auto;
+}
+
+.sticky-footer-css .header {
+  background-color: #2c3840;
+  height: 10rem;
+  color: #fff;
+  padding: 3rem;
+}
+
+.sticky-footer-css .header .menu a {
+  color: #fff;
+}
+
+.sticky-footer-css .body-content {
+  background-color: #fff;
+}
+
+.sticky-footer-css .footer {
+  height: 10rem;
+  background-color: #2c3840;
+  color: #fff;
+  padding: 3rem;
+}
+
+.sticky-footer-css .footer .menu a {
+  color: #fff;
+}
+
+/* footer */
+
+#header {
+  margin-top: 0px;
+}
+
+#top-image {
+  max-width: 1200px;
+  min-width: 800px;
+  padding: 0 0 0 30%;
+}
+
+.song-class {
+  list-style-type: none;
+}
+.song-title {
+  font-weight: bolder;
+}
+
+.cast-class {
+  list-style-type: none;
+}
+.crew-class {
+  list-style-type: none;
+}
+#quote-list {
+  list-style-type: none;
+}
+#quote-text {
+  font-style: italic;
+}
+#quote-person {
+  font-style: normal;
+}

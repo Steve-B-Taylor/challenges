@@ -1,0 +1,12 @@
+{
+  "name": "bank-account-js",
+  "version": "1.0.0",
+  "description": "Create a Bank Account class",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

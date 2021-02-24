@@ -1,0 +1,107 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Alegreya";
+}
+
+nav {
+  width: 100;
+  background-color: #00bfff;
+  margin: 0 0 2em 0;
+  padding: 1em 0 0.2em 2em;
+  color: #f0f8ff;
+}
+
+.site-title {
+  font-size: 2em;
+  margin-bottom: 0.2em;
+}
+
+.sub-title {
+  margin-bottom: 2em;
+  font-weight: lighter;
+}
+
+.quote {
+  background-color: #7cfc00;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  padding: 20px 50px;
+  border-color: #014b01;
+  border-style: solid;
+  border-width: 2px;
+  color: #014b01;
+}
+
+.quoted-from {
+  text-align: right;
+  font-style: italic;
+}
+
+.try-it-now {
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 1em;
+  border-color: #000000;
+  background-color: #fa42c3;
+  color: #f8f8f8;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.try-it-now a {
+  color: #f8f8f8;
+  font-size: 1.5em;
+}
+
+.try-it-now h3 a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+.try-it-now a:hover {
+  color: #74c5f5;
+}
+
+.blue-page-section {
+  background-color: #1b1b2e;
+  margin-top: 50px;
+}
+
+.blue-page-section .content-wrapper {
+  color: #f0f8ff;
+  width: 80%;
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 30px 0;
+}
+
+footer {
+  background-color: #010120;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #f0f8ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff7f50;
+}

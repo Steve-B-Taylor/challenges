@@ -1,0 +1,13 @@
+# Files to ignore when uploading to Launch
+news-aggregator-nodejs.md
+.eslintignore
+.eslintrc.js
+.etignore
+.gitignore
+.prettierrc
+.vscode
+node_modules
+package-lock.json
+package.json
+README.md
+yarn.lock

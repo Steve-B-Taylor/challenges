@@ -1,0 +1,65 @@
+/* your CSS from an earlier exercise here  */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 15px;
+}
+
+div {
+  text-align: center;
+  padding-left: 10rem;
+  max-width: 500px;
+}
+
+.me-blurb {
+  text-align: justify;
+  padding-left: 3.5rem;
+}
+
+.page-header {
+  color: cadetblue;
+}
+
+.nekkid-bullets {
+  list-style: none;
+}
+
+.basically-me {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  padding: 1rem;
+}
+
+.myLinks {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-decoration: none;
+  color: #483d8b;
+}
+
+.myLinks a {
+  color: #b8860b;
+}
+
+.myLinks a:hover {
+  color: #a52a2a;
+}
+
+.selected {
+  border: 10px solid #ff0000;
+}
+
+.hidden {
+  display: none;
+}

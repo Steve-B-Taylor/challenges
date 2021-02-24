@@ -1,0 +1,17 @@
+{{!--
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/new-style.css"> --}}
+{{log recipe.name}}
+<h1>{{recipe.name}}</h1>
+<h2>Ingredients</h2>
+<ul>
+  {{#each recipe.ingredients}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+<h2>Directions</h2>
+<ol>
+  {{#each recipe.directions}}
+  <li>{{this}}</li>
+  {{/each}}
+</ol>

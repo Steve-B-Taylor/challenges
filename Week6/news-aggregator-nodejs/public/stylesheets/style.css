@@ -1,0 +1,18 @@
+.article-title {
+  font-weight: bold;
+}
+
+.article-description {
+  font-style: normal;
+}
+
+a {
+  background-color: powderblue;
+  transition: background-color 0.5s;
+  font-size: 0.8rem;
+}
+
+a:hover {
+  background-color: gold;
+  font-size: 0.8rem;
+}

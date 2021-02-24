@@ -1,0 +1,10 @@
+{
+  "name": "the-hypertext-transfer-protocol-with-javascript",
+  "version": "1.0.0",
+  "main": "code.js",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "type": "module"
+}

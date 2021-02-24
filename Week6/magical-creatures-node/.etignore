@@ -1,0 +1,6 @@
+# Files to ignore when uploading to Launch
+magical-creatures-node.md
+package.json
+yarn.lock
+public/images
+node_modules

@@ -1,0 +1,11 @@
+body {
+  background-color: #fed8b1;
+}
+
+h1 {
+  color: #080467;
+}
+
+.hidden {
+  display: none;
+}

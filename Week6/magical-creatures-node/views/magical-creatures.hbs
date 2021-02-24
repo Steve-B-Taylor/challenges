@@ -1,0 +1,11 @@
+<h1>Magical Creatures</h1>
+<ol>
+  {{#each myCreatures}}
+  <li>Name: <a href="{{this.name}}">{{this.name}}</a>
+  </li>
+  <ul>
+    <li>Ability: {{this.ability}}</li>
+    <li>Age: {{this.age}}</li>
+  </ul>
+  {{/each}}
+</ol>

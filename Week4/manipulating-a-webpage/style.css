@@ -1,0 +1,39 @@
+body {
+  background-color: #00003c;
+  font-family: Helvetica;
+}
+
+h1 {
+  color: #f47913;
+}
+
+h2,
+h4 {
+  color: #f2f413;
+}
+
+h4 {
+  margin-left: 1.5em;
+}
+
+p {
+  color: #f413df;
+}
+
+ul {
+  color: #62df22;
+}
+
+.centered {
+  text-align: center;
+}
+
+.facts-section {
+  border: 2px solid #13f4e3;
+  border-radius: 1em;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}

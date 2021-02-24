@@ -1,0 +1,26 @@
+{
+  "animals":
+  [
+    {"id":1,
+      "name":"Koala",
+      "type":"Marsupial"},
+    {"id":2,
+      "name":"Platypus",
+      "type":"Monotreme"},
+    {"id":3,
+      "name":"Quokka",
+      "type":"Marsupial"},
+    {"id":4,
+      "name":"Kookaburra",
+      "type":"Bird"},
+    {"id":5,
+      "name":"Heterotardigrada",
+      "type":"Arthrotardigrada"},
+    {"id":6,
+      "name":"Tardigrade",
+      "type":"Arthrotardigrada"},
+    {"id":7,
+      "name":"Tardigrade",
+      "type":"Arthrotardigrada"}
+    ]
+}

@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Alegreya";
+  font-size: 14;
+  background-color: #808080;
+  text-align: center;
+}
+
+#main-container {
+  max-width: 800px;
+  width: auto;
+  margin: 0 20% 0 20%;
+  padding: 0px;
+  background-color: #d3d3d3;
+  border: 2px solid black;
+}
+
+.section-head {
+  color: #00008b;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#slogan {
+  border: 3px solid;
+  margin: 10px 20% 0 20%;
+}
+
+#core-values {
+  margin: 10px 30% 0 35%;
+  text-align: left;
+}
+
+.links-details {
+  padding: 0 10px;
+  color: #1f1f2b;
+}
+
+a:hover {
+  color: #00ffff;
+}
+
+#edit-button {
+  padding: 10px 0 10px 0;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "express-routing",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon src/app.js",
+    "dev:debug": "./node_modules/.bin/nodemon --inspect-brk src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

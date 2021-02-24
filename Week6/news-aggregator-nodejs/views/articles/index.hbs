@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+<p>Click <a href="articles/new">here</a> to add a new article</p>
+<ul>
+  {{#each articles }}
+  <li class="article-title">{{ this.title }}</li>
+  <ul>
+    <li class="article-link"><a href="{{ this.url }}" target="_blank">{{ this.url }}</a></li>
+    <li class="article-description">{{this.description}}</li>
+  </ul>
+  {{/each}}
+</ul>

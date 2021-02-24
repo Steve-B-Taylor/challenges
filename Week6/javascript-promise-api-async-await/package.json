@@ -1,0 +1,9 @@
+{
+  "name": "javascript-promise-api-async-await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myPromise.js",
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
