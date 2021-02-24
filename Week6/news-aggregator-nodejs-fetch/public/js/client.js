@@ -22,10 +22,18 @@ function genRandom(max) {
 const addRandomArticle = async () => {
   const articles = await fetchArticles()
   findRandomArticle = genRandom(articles.length)
-  console.log(`JoeDog:  ${articles[findRandomArticle].title}`)
-  console.log(`JoeDog:  ${articles[findRandomArticle].url}`)
-  console.log(`JoeDog:  ${articles[findRandomArticle].description}`)
-  console.log(`JoeDog:  ${findRandomArticle}`)
-}
+  const rndTitle = document.getElementById("article-title")
+  const rndURL = document.getElementById("article-link")
+  const rndDesc = document.getElementById("article-description")
 
-addRandomArticle()
+  rndTitle.innerHTML = `<li>${articles[findRandomArticle].title}</li>`
+  rndURL.innerHTML = `<li><a href="${articles[findRandomArticle].url}" target="_blank">${
+    articles[findRandomArticle].url
+  }</a></li>`
+  rndDesc.innerHTML = `<li>${articles[findRandomArticle].description}</li>`
+}
+let editButton = document.getElementById("randomArticle")
+
+editButton.addEventListener("click", () => {
+  addRandomArticle()
+})
