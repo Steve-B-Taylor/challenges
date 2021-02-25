@@ -1,0 +1,10 @@
+<h1 id="welcome-header">Products</h1>
+{{#each products}}
+<ul>
+  <li>{{this.name}}</li>
+  <ul>
+    <li>{{this.description}}</li>
+    <li>${{this.price}}</li>
+  </ul>
+</ul>
+{{/each}}
