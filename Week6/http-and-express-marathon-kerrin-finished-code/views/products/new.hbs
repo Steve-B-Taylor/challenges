@@ -1,0 +1,22 @@
+<h1>Add a new product</h1>
+
+<form action="/products" method="POST">
+  <label for="name">Name:
+    <input type="text" name="name" id="name"/>
+  </label>
+  <label for="description">description:
+    <input type="text" name="description" id="description"/>
+  </label>
+  <label for="price">price:
+    <input type="text" name="price" id="price"/>
+  </label>
+
+  <label for="featured-true">Featured: Yes</label>
+  <input type="radio" id="featured-true" name="featured" value="true" />
+
+  <label for="featured-false">Featured: No</label>
+  <input type="radio" id="featured-false" name="featured" value="false" />
+
+  <input type="submit" value="Submit"/>
+</form>
+
