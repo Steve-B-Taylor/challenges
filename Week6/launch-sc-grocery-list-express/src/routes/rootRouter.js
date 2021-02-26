@@ -11,7 +11,7 @@ rootRouter.get("/", (req, res) => {
 rootRouter.use("/groceries", groceriesRouter);
 
 // comment the below lines in for Exceeds
-// import apiGroceriesRouter from "./api/v1/groceriesRouter"
-// rootRouter.use("/api/v1/groceries", apiGroceriesRouter)
+import apiGroceriesRouter from "./api/v1/groceriesRouter.js";
+rootRouter.use("/api/v1/groceries/random", apiGroceriesRouter);
 
 export default rootRouter;

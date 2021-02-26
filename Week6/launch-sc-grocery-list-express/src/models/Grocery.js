@@ -1,9 +1,14 @@
 import fs from "fs";
 
 const groceriesPath = "groceries.json";
+const randomGroceriesPath = "exceeds_random_items.json";
 
 const readJSON = () => {
   return JSON.parse(fs.readFileSync(groceriesPath));
+};
+
+const readRandomJSON = () => {
+  return JSON.parse(fs.readFileSync(randomGroceriesPath));
 };
 
 class Grocery {
@@ -19,6 +24,15 @@ class Grocery {
     return groceryObj;
   }
 
+  static findAllRandom() {
+    const groceryData = readRandomJSON().items;
+    const groceryObj = groceryData.map((grocery) => {
+      return new Grocery(grocery);
+    });
+    console.log(groceryObj);
+    return groceryObj;
+  }
+
   save() {
     const items = this.constructor.findAll();
     items.push(this);
@@ -26,7 +40,7 @@ class Grocery {
   }
 
   isValid() {
-    if (!this.name.trim()) {
+    if (!this.name) {
       return false;
     }
     return true;

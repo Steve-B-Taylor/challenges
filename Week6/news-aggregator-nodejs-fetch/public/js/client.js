@@ -1,6 +1,6 @@
 const fetchArticles = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/v1/random")
+    const response = await fetch("http://lorandomcalhost:3000/api/v1/")
     if (!response.ok) {
       const errorMessage = `${response.status} (${response.statusText})`
       const error = new Error(errorMessage)

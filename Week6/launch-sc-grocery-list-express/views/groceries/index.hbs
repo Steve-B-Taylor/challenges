@@ -1,9 +1,13 @@
 <h1>Groceries Page</h1>
 <div>
   <p><a href="/groceries/new">Add a Grocery Item</a></p>
-  {{#each groceries}}
-  <ul>
-    <li>{{ this.name }}</li>
+  <form action="/groceries" method="POST">
+    <input id="randomItem" type="submit" value="Add Random Item">
+    {{!-- <button id="randomItem">Add Random Item</button> --}}
+  </form>
+  <ul class="grocery-list">
+    {{#each groceries}}
+    <li id="grocery-item">{{ this.name }}</li>
+    {{/each}}
   </ul>
-  {{/each}}
 </div>
