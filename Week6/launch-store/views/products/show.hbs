@@ -1,0 +1,10 @@
+<h1>{{product.name}}</h1>
+<p><a href="/products">Return</a> to the products page</p>
+
+<ul>
+  <li>{{product.description}}</li>
+  <li>${{product.price}}</li>
+</ul>
+<form action="/products/{{ product.name }}" method="POST">
+  <input type="submit" id="delete-button" value="Delete">
+</form>

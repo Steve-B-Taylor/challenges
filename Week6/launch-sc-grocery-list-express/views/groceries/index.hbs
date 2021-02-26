@@ -1,0 +1,9 @@
+<h1>Groceries Page</h1>
+<div>
+  <p><a href="/groceries/new">Add a Grocery Item</a></p>
+  {{#each groceries}}
+  <ul>
+    <li>{{ this.name }}</li>
+  </ul>
+  {{/each}}
+</div>

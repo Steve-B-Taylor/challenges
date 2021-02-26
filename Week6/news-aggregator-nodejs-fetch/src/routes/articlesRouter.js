@@ -17,10 +17,22 @@ articlesRouter.get("/random", (req, res) => {
   res.render("articles/random")
 })
 
+// articlesRouter.post("/", (req, res) => {
+//   const newArticle = new Article(req.body)
+//   newArticle.save()
+//   res.redirect("/articles")
+// })
+
 articlesRouter.post("/", (req, res) => {
-  const newArticle = new Article(req.body)
-  newArticle.save()
-  res.redirect("/articles")
+  debugger
+  const formData = req.body
+  if (req.body.title.trim() === "") {
+    res.render("articles/new")
+  } else {
+    const newArticle = new Article(formData)
+    newArticle.save()
+    res.redirect("/")
+  }
 })
 
 export default articlesRouter

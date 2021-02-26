@@ -1,7 +1,8 @@
 <h1 id="welcome-header">Products</h1>
+<p>Add new products <a href="/products/new">here</a></p>
 {{#each products}}
 <ul>
-  <li>{{this.name}}</li>
+  <li><a href="/products/{{this.name}}">{{this.name}}</a></li>
   <ul>
     <li>{{this.description}}</li>
     <li>${{this.price}}</li>

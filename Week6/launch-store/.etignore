@@ -1,2 +1,7 @@
 # Files to ignore when uploading to Launch
 launch-store.md
+node_modules
+.gitignore
+.prettierrc
+package.json
+yarn.lock
