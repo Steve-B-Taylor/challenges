@@ -1,5 +1,5 @@
 {
-  "name": "introduction-to-react",
+  "name": "event-manager",
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
@@ -9,20 +9,20 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "react": "~16.8.0",
+    "react-dom": "~16.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "css-loader": "^0.26.2",
+    "css-loader": "2.1.1",
     "node-sass": "^4.14.0",
-    "sass-loader": "^6.0.2",
-    "style-loader": "^0.13.2",
+    "sass-loader": "6.0.5",
+    "style-loader": "0.18.1",
     "webpack": "~2.3.1",
     "webpack-dev-server": "~2.4.2"
-  },
-  "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6"
   }
 }
