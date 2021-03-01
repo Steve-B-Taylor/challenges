@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=ABeeZee|Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=ABeeZee|Open+Sans");
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   max-width: 1000px;
   margin: auto;
 }
 
+#reminder-button {
+  max-width: 100%;
+  margin-left: 90%;
+}
+
 h1 {
-  font-family: 'ABeeZee', serif;
+  font-family: "ABeeZee", serif;
   text-align: center;
 }
 
@@ -32,6 +37,10 @@ div {
   background-color: #37becc;
 }
 
+.grey-bg {
+  background-color: #808080;
+}
+
 .event-tile {
   background-color: #37becc;
 }
@@ -39,4 +48,11 @@ div {
 .event-management-app {
   background-color: #e5f3f4;
   color: #1c2224;
+}
+
+#complete-button {
+  max-width: 100%;
+  margin: 0 0 0 auto;
+  padding: 0;
+  margin-left: 70%;
 }

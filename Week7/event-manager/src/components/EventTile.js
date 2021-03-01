@@ -1,7 +1,8 @@
 import React from "react";
+import CompleteButton from "./CompleteButton";
 
 const EventTile = (props) => {
-  let eventColor = "";
+  let eventColor = "event-tile";
   switch (props.eventType) {
     case "personal":
       eventColor = "green-bg";
@@ -12,12 +13,18 @@ const EventTile = (props) => {
     case "business-casual":
       eventColor = "blue-bg";
   }
+  console.log(props.isComplete);
 
   return (
-    <div className={eventColor}>
-      <h2>{props.title}</h2>
-      <p>{props.timePeriod}</p>
-      <p>{props.description}</p>
+    <div>
+      <div className={eventColor}>
+        <div id="complete-button">
+          <CompleteButton />
+        </div>
+        <h2>{props.title}</h2>
+        <p>{props.timePeriod}</p>
+        <p>{props.description}</p>
+      </div>
     </div>
   );
 };
