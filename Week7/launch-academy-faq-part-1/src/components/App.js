@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import FaqList from "./FaqList";
 
 const App = (props) => {
-  return(
-    <div>hello from your react app</div>
-  )
-}
+  return (
+    <div>
+      <h1>We're here to help</h1>
+      <FaqList faqData={props.data} />
+    </div>
+  );
+};
 
 export default App;
