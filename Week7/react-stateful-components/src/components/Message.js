@@ -1,14 +1,21 @@
-import React from "react"
+import React, { useState } from "react";
 
-const Message = props => {
-  const clickCount = 0
+const Message = (props) => {
+  const [clickCount, setClickCount] = useState(0);
+
+  const incrementCount = (event) => {
+    debugger;
+    event.preventDefault();
+    const newClickCount = clickCount + 1;
+    setClickCount(newClickCount);
+  };
 
   return (
-    <div>
+    <div onClick={incrementCount}>
       <h1>Message: {props.message}</h1>
       <h1>Click Count: {clickCount}</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Message
+export default Message;
