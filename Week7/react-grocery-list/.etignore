@@ -1,6 +1,0 @@
-# Files to ignore when uploading to Launch
-react-grocery-list.md
-node_modules
-webpack.config.js
-.gitignore
-yarn.lock
