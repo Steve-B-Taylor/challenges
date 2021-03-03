@@ -1,1 +1,80 @@
 /* YOUR STYLING HERE */
+
+body {
+  background-color: #e5f3f4;
+  font-family: "Comic Sans MS";
+}
+
+.tweetContainer {
+  border: 2px solid black;
+  margin-top: 15px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: white;
+}
+
+.tweet-upper-container {
+  margin-top: 5px;
+  display: flex;
+  // border: 2px solid black;
+}
+
+.user-image-url {
+  margin-left: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.userInfo {
+  margin-left: 10px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.user-name {
+  font-weight: bold;
+}
+.user-screen-name {
+  color: grey;
+}
+
+.user-post-date {
+  color: grey;
+}
+
+// .tweetInfo {
+//   margin-left: 120px;
+//   display: inline-block;
+// }
+
+.tweetMedia {
+  margin-left: 100px;
+  margin-right: 40px;
+}
+
+.tweetMeta-gap {
+  // margin-left: 5px;
+  margin-right: 15px;
+}
+
+.tweetMeta-gap-right {
+  margin-left: 5px;
+}
+
+.tweet-lower-container {
+  margin-left: 100px;
+  margin-bottom: 5px;
+}
+
+.liked {
+  color: red;
+  padding-left: 15px;
+}
+
+.retweet {
+  color: green;
+}
+
+li {
+  list-style: none;
+}
