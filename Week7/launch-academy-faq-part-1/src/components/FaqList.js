@@ -5,7 +5,11 @@ const FaqList = (props) => {
   const [selectedFaqID, setSelectedFaqID] = useState(null);
   const faqList = props.faqData.map((faq) => {
     const selectFaqFunction = () => {
-      return setSelectedFaqID(faq.id);
+      if (faq.id === selectedFaqID) {
+        return setSelectedFaqID(null);
+      } else {
+        return setSelectedFaqID(faq.id);
+      }
     };
     let faqSelected = false;
     if (selectedFaqID === faq.id) {

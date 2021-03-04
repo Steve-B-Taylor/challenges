@@ -8,6 +8,7 @@ const TravelList = (props) => {
   let tagline;
 
   const places = props.data.places.map((place) => {
+    let visited = false;
     const selectPlaceFunction = () => {
       if (place.id === selectedPlaceID) {
         return setSelectedPlaceID(null);

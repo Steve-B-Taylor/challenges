@@ -13,14 +13,27 @@ const EventTile = (props) => {
     case "business-casual":
       eventColor = "blue-bg";
   }
-  console.log(props.isComplete);
+
+  const isComplete = () => {
+    let isCompleted = true;
+    eventColor = "grey-bg";
+    console.log(`isCompleted: ${isCompleted}`);
+
+    return eventColor;
+  };
 
   return (
     <div>
+      <div>
+        <button onClick={isComplete} id="complete-button">
+          Completed
+        </button>
+      </div>
       <div className={eventColor}>
-        <div id="complete-button">
+        {/* <div id="complete-button">
           <CompleteButton />
-        </div>
+        </div> */}
+
         <h2>{props.title}</h2>
         <p>{props.timePeriod}</p>
         <p>{props.description}</p>

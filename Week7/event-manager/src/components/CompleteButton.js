@@ -3,7 +3,7 @@ import React from "react";
 const CompleteButton = (props) => {
   const isComplete = () => {
     let isCompleted = true;
-    let bgColor = "grey-bg";
+    let eventColor = "grey-bg";
     return isCompleted;
   };
   return (
