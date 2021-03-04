@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const ChocolateList = (props) => {
+  const [chocolateClicked, setChocolateClicked] = useState(null);
 
   const chocolateData = [
     "Cadbury Chocolate Bar",
@@ -8,25 +9,29 @@ const ChocolateList = (props) => {
     "Hershey's Special Dark",
     "Lily's Sugar Free Chocolate",
     "Crunch",
-    "Toblerone"
-  ]
+    "Toblerone",
+  ];
 
-  let chocolateListItems = chocolateData.map((chocolate) => {
-    return(
-      <li>
-        {chocolate}
-      </li>
-    )
-  })
+  const chocolateClick = (event) => {
+    setChocolateClicked(!chocolateClicked);
+  };
 
-  return(
+  let chocolateId = 0;
+  let chocolateListItems;
+
+  if (chocolateClicked) {
+    chocolateListItems = chocolateData.map((chocolate) => {
+      chocolateId++;
+      return <li key={chocolateId}>{chocolate}</li>;
+    });
+  }
+
+  return (
     <div id="chocolate-app">
-      <h1>CHOCOLATE ONLY CABINET</h1>
-      <ul>
-        {chocolateListItems}
-      </ul>
+      <h1 onClick={() => chocolateClick()}>CHOCOLATE ONLY CABINET</h1>
+      <ul>{chocolateListItems}</ul>
     </div>
-  )
-}
+  );
+};
 
 export default ChocolateList;
