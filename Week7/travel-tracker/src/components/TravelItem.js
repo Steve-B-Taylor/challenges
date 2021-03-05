@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TravelItem = (props) => {
-  let place = props.name;
-  let itemDone;
-  if (props.placeSelected) {
-    itemDone = "done";
-  }
+const TravelItem = ({ name, triggerSelected }) => {
+  const [itemDone, setItemDone] = useState(false);
+
+  let crossOffItem = itemDone ? "done" : "";
+  const handleClick = () => {
+    setItemDone(!itemDone);
+    triggerSelected();
+  };
 
   return (
     <div>
       <ul>
-        <li onClick={props.handleClick} className={itemDone}>
-          {place}
+        <li onClick={handleClick} className={crossOffItem}>
+          {name}
         </li>
       </ul>
     </div>

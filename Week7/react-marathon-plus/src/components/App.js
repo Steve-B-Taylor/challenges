@@ -9,7 +9,7 @@ const App = (props) => {
     <div className="grid-container app">
       <h1 className="title">React Music Player</h1>
       <div className="grid-x">
-        <div className="cell large-6">
+        <div className="cell small-6">
           <PlaylistCollection playlists={playlists} />
         </div>
         <div className="cell auto">

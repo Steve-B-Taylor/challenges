@@ -6,7 +6,11 @@ const PlaylistCollection = (props) => {
 
   const playlistList = props.playlists.map((list) => {
     const handleClick = () => {
-      setSelectedPlaylist(list.id);
+      if (selectedPlaylist === list.id) {
+        setSelectedPlaylist(null);
+      } else {
+        setSelectedPlaylist(list.id);
+      }
     };
 
     let selectedStatus = false;
