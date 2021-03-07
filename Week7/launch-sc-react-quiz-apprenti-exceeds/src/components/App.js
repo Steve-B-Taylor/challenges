@@ -9,7 +9,7 @@ const App = (props) => {
       <h1 className="title">React Quiz</h1>
       <div className="text-center">
         <QuestionList
-          data={props.data.question}
+          data={props.data.questions}
           setSelectedQuestionId={setSelectedQuestionId}
         />
       </div>
