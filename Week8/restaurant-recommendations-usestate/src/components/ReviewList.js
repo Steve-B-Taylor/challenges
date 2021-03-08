@@ -3,18 +3,19 @@ import React from "react";
 import Review from "./Review";
 
 const ReviewList = (props) => {
-  const reviewsList = props.data.map((review) => {
-    console.log(review.id);
-    const id = review.id;
-    const clientName = review.name;
-    const rating = review.rating;
-    const content = review.content;
-
+  const reviewTiles = props.reviewsData.map((review) => {
     return (
-      <Review id={id} name={clientName} rating={rating} content={content} />
+      <span key={review.id}>
+        <Review
+          id={review.id}
+          name={review.name}
+          rating={review.rating}
+          content={review.content}
+        />
+      </span>
     );
   });
-  return <div>{Review}</div>;
+  return <div>{reviewTiles}</div>;
 };
 
 export default ReviewList;
