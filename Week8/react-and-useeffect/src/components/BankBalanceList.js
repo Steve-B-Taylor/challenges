@@ -1,26 +1,36 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import useIdleTimeout from "../effects/useIdleTimeout";
+import useClickCounterInTitle from "../effects/useClickCounterInTitle";
 
-const BankBalanceList = props => {
+const BankBalanceList = (props) => {
   const [bankBalances, setBankBalances] = useState([
     { name: "Checking Account", balance: 0 },
-    { name: "Savings Account", balance: 0 }
-  ])
+    { name: "Savings Account", balance: 0 },
+  ]);
 
-  const updateAccounts = event => {
-    event.preventDefault()
+  useIdleTimeout(10000, []);
+  const [clickCount, setClickCount] = useClickCounterInTitle();
+
+  const updateAccounts = (event) => {
+    event.preventDefault();
     setBankBalances([
       { name: "Checking Account", balance: Math.random() * 60000 },
-      { name: "Savings Account", balance: Math.random() * 400000 }
-    ])
-  }
+      { name: "Savings Account", balance: Math.random() * 400000 },
+    ]);
+  };
 
-  const bankAccountListItems = bankBalances.map(account => {
+  const bankAccountListItems = bankBalances.map((account) => {
     return (
-      <li key={account.name}>
+      <li
+        onClick={() => {
+          setClickCount(clickCount + 1);
+        }}
+        key={account.name}
+      >
         <strong>{account.name}</strong> - ${account.balance.toFixed(2)}
       </li>
-    )
-  })
+    );
+  });
 
   return (
     <div className="bank-accounts">
@@ -31,7 +41,7 @@ const BankBalanceList = props => {
       </p>
       <ul>{bankAccountListItems}</ul>
     </div>
-  )
-}
+  );
+};
 
-export default BankBalanceList
+export default BankBalanceList;
