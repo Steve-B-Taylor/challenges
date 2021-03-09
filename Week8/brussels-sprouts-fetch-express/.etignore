@@ -1,2 +1,10 @@
 # Files to ignore when uploading to Launch
 brussels-sprouts-fetch-express.md
+client/public/favicon.ico
+client/src/assets/scss/foundation/_settings.scss
+client/webpack.config.js
+server/src/boot/environments/
+server/src/config/getNodeEnv.js
+server/src/config.js
+server/src/middlewares/
+server/test/utils/
