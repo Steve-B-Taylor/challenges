@@ -1,0 +1,26 @@
+@import "./foundation/settings";
+@import "~foundation-sites/scss/foundation";
+@include foundation-everything;
+// place global css here
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.resume-section {
+  border: 1px solid black;
+  margin-top: 5em;
+}
+
+.project {
+  border: 1px solid black;
+  margin-top: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+}
