@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import MilkTile from "../components/MilkTile"
 
-const MilksIndexPage = props => {
+const MilksIndexPage = (props) => {
   const [milks, setMilks] = useState([])
 
   const getMilks = async () => {
@@ -23,14 +24,14 @@ const MilksIndexPage = props => {
     getMilks()
   }, [])
 
-  const milkTiles = milks.map(milk => {
+  const milkTiles = milks.map((milk) => {
     return <MilkTile key={milk.id} milk={milk} />
   })
 
   return (
     <div className="center-bg">
       <h3 className="so-great">Milks Are Also Great</h3>
-      <a href="/">But so are cereals</a>
+      <Link to="/">But so are cereals</Link>
       {milkTiles}
     </div>
   )

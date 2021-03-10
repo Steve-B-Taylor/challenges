@@ -1,15 +1,16 @@
-import React from 'react'
+import React from "react"
 import { hot } from "react-hot-loader/root"
+import { BrowserRouter, Route } from "react-router-dom"
 
 import "../assets/scss/main.scss"
 
-import CerealsIndexPage from "./CerealsIndexPage"
+import NavBar from "./NavBar"
 
-const App = props => {
+const App = (props) => {
   return (
-    <div>
-      <CerealsIndexPage />
-    </div>
+    <BrowserRouter>
+      <Route path="/" component={NavBar} />
+    </BrowserRouter>
   )
 }
 

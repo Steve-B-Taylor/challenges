@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react"
 
 import CerealInformation from "./CerealInformation"
 
-const CerealShowContainer = props => {
+const CerealShowContainer = (props) => {
   const [cereal, setCereal] = useState({})
 
   const getCereal = async () => {
     try {
+      let cerealId = props.match.params.id
       const response = await fetch(`/api/v1/cereals/${cerealId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
