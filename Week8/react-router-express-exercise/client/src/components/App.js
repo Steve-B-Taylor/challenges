@@ -1,13 +1,15 @@
 import React from "react"
 import { hot } from "react-hot-loader/root"
+import { BrowserRouter, Route, Switch } from "react-router-dom"
 
-import Greeting from "./Greeting"
-import Goodbye from "./Goodbye"
 import NavBar from "./NavBar"
-import CustomGreeting from "./CustomGreeting"
 
-const App = props => {
-  return <h1>Create a Router Here</h1>
+const App = (props) => {
+  return (
+    <BrowserRouter>
+      <Route path="/" component={NavBar} />
+    </BrowserRouter>
+  )
 }
 
 export default hot(App)
