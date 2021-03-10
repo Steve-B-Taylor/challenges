@@ -13,4 +13,7 @@ server/babel.config.cjs
 server/jest.config.cjs
 server/public/css/vendor/normalize.min.css
 server/src/middlewares
+server/src/boot
 server/test/utils/truncateModel.js
+server/src/config/getNodeEnv.js
+server/src/config.js
