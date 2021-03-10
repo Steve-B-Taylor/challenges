@@ -21,7 +21,6 @@ const Question = (props) => {
 
   return (
     <div>
-      <div>Question.js</div>
       <div className={questionClass}>
         {button}
         <h5 onClick={props.handleClick}>{props.question}</h5>

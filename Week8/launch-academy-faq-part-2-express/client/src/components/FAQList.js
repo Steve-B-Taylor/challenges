@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Question from "./Question"
+import QuestionForm from "./QuestionForm"
 import { hot } from "react-hot-loader/root"
 
 const FAQList = (props) => {
@@ -27,6 +28,28 @@ const FAQList = (props) => {
       // console.log(`Body: ${questionData}`)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
+    }
+  }
+
+  const postQuestion = async (formPayload) => {
+    // debugger
+    try {
+      const response = await fetch("/api/v1/questions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question: formPayload }),
+      })
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        throw new Error(errorMessage)
+      }
+      const body = await response.json()
+      // debugger
+      setQuestions([...questions, body.newQuestion])
+    } catch (error) {
+      console.error(`Error in Fetch: ${error.message}`)
     }
   }
 
@@ -59,6 +82,7 @@ const FAQList = (props) => {
   return (
     <div className="page">
       <h1>We Are Here To Help</h1>
+      <QuestionForm postQuestion={postQuestion} />
       <div className="question-list">{questionListItems}</div>
     </div>
   )

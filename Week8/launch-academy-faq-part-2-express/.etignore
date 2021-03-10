@@ -1,2 +1,16 @@
 # Files to ignore when uploading to Launch
 launch-academy-faq-part-2-express.md
+.eslintrc.cjs
+.etignore
+.gitignore
+.prettierrc
+node_modules
+yarn.lock
+client/babel.config.js
+client/src/assets/scss/
+client/webpack.config.js
+server/babel.config.cjs
+server/jest.config.cjs
+server/public/css/vendor/normalize.min.css
+server/src/middlewares
+server/test/utils/truncateModel.js

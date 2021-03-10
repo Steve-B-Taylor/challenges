@@ -4,7 +4,7 @@ import _ from "lodash"
 const questionsPath = "questions.json"
 
 class Question {
-  constructor({id, question, answer}) {
+  constructor({ id, question, answer }) {
     this.id = id
     this.question = question
     this.answer = answer
@@ -12,7 +12,7 @@ class Question {
 
   static findAll() {
     const questionData = JSON.parse(fs.readFileSync(questionsPath)).questions
-    const questions = questionData.map(question => new Question(question))
+    const questions = questionData.map((question) => new Question(question))
     return questions
   }
 
@@ -21,9 +21,9 @@ class Question {
     const requiredFields = ["question", "answer"]
     let isValid = true
 
-    for(const requiredField of requiredFields) {
+    for (const requiredField of requiredFields) {
       this.errors[requiredField] = []
-      if(!this[requiredField]) {
+      if (!this[requiredField]) {
         isValid = false
         this.errors[requiredField].push("Can't be blank")
       }
@@ -32,12 +32,12 @@ class Question {
   }
 
   static getNextQuestionId() {
-    const maxQuestion = _.maxBy(this.findAll(), Question => Question.id)
+    const maxQuestion = _.maxBy(this.findAll(), (question) => question.id)
     return maxQuestion.id + 1
   }
 
   save() {
-    if(this.isValid()) {
+    if (this.isValid()) {
       delete this.errors
       this.id = this.constructor.getNextQuestionId()
       const questions = this.constructor.findAll()
