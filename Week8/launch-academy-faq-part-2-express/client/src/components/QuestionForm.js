@@ -5,6 +5,7 @@ const QuestionForm = (props) => {
     question: "",
     answer: "",
   })
+  const [errors, setErrors] = useState("")
 
   const handleChange = (event) => {
     setNewQuestion({
@@ -15,11 +16,23 @@ const QuestionForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.postQuestion(newQuestion)
+    if (newQuestion.question !== "" && newQuestion.answer !== "") {
+      setErrors("")
+      props.postQuestion(newQuestion)
+      setNewQuestion({ question: "", answer: "" })
+    } else {
+      setErrors("All fields required")
+    }
+  }
+
+  let errorMessage
+  if (errors) {
+    errorMessage = <h2>{errors}</h2>
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      {errorMessage}
       <label htmlFor="question">What do you want to know? </label>
       <br />
 

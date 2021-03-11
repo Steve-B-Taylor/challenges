@@ -13,14 +13,65 @@
   tab-size: 4;
 }
 
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: blanchedalmond;
+  padding: 2em;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+}
+
+.navbar-container {
+  border: 2px solid red;
+}
+
+.navbar {
+  text-align: center;
+  display: inline;
+  margin-bottom: 5rem;
+  padding-left: 15%;
+}
+
 .resume-section {
   border: 1px solid black;
-  margin-top: 5em;
+  margin-top: 2em;
+  padding-left: 2rem;
+  text-align: left;
+}
+
+.resume-head {
+  margin-left: 2rem;
+  padding: 0.5rem;
+  background-color: cornflowerblue;
+  color: azure;
+  border: 2px solid black;
+}
+
+#skills {
+  color: chocolate;
+}
+
+#education {
+  color: darkblue;
+}
+
+#past-work {
+  color: firebrick;
+}
+
+#volunteer-experience {
+  color: darkgreen;
 }
 
 .project {
   border: 1px solid black;
-  margin-top: 5em;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.resume-top {
+  text-align: center;
+  font-size: 0.7rem;
 }

@@ -1,10 +1,12 @@
 import React from "react"
-
-const ProjectTile = ({ project: { name, description } }) => {
+import { Link } from "react-router-dom"
+const ProjectTile = ({ project: { id, name, description } }) => {
   return (
     <div className="row">
       <div className="project small-9 small-centered columns">
-        <h2>{name}</h2>
+        <h2>
+          <Link to={`/projects/${id}`}>{name}</Link>
+        </h2>
         <h3>Description: {description} </h3>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import ProjectShowTile from "./ProjectShowTile"
 
-const ProjectShow = props => {
+const ProjectShow = (props) => {
   const [project, setProject] = useState({})
   const projectId = props.match.params.id
 
@@ -12,18 +12,18 @@ const ProjectShow = props => {
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
-        throw(error)
+        throw error
       }
       const responseData = await response.json()
       setProject(responseData.project)
-    } catch(err) {
+    } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
   }
-  
+
   useEffect(() => {
     fetchData()
-  },[])
+  }, [])
 
   return (
     <div>
