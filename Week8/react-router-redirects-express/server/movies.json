@@ -1,0 +1,12 @@
+{
+  "movies": [
+    { "id": 1, "title": "The Labyrinth" },
+    { "id": 2, "title": "Princess Bride" },
+    { "id": 3, "title": "Mystery Men" },
+    { "id": 4, "title": "LadyHawke" },
+    { "id": 5, "title": "The 13th Warrior" },
+    { "id": 6, "title": "Superbad" },
+    { "id": 7, "title": "A Night at the Museum" },
+    { "id": 8, "title": "Serenity" }
+  ]
+}

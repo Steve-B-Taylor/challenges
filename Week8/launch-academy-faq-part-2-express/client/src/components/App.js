@@ -10,6 +10,8 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <Switch>
+        {/* Adding a <Route> here means you also need to update 
+        the [clientRoutes] array in server/src/routes/clientRouter.js */}
         <Route exact path="/" component={FAQList} />
         <Route exact path="/launchers" component={LauncherList} />
         <Route exact path="/launchers/:id" component={LauncherShow} />
