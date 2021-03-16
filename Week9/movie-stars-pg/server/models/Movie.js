@@ -3,17 +3,42 @@ import fs from "fs"
 import _ from "lodash"
 
 const pool = new pg.Pool({
-  connectionString: "postgres://postgres:postgres@localhost:5432/movie-stars-pg"
+  connectionString: "postgres://postgres:password@localhost:5432/movie-stars-pg",
 })
 
 class Movie {
+  constructor({ id, title, genre, description }) {
+    ;(this.id = id), (this.title = title), (this.genre = genre), (this.description = description)
+  }
+
   static async findAll() {
-    return "This should query all the movies and return them."
+    try {
+      const client = await pool.connect()
+      const result = await client.query("SELECT * FROM movies;")
+
+      const movies = result.rows
+
+      client.release()
+      return movies
+    } catch (error) {
+      console.error(`ERROR: ${error}`)
+      pool.end()
+    }
   }
 
   static async findById(id) {
-    return "This should query the movie with the provided id and return it."
+    try {
+      const client = await pool.connect()
+      const result = await client.query(`SELECT * FROM movies WHERE id = ${id};`)
+
+      const movie = result.rows[0]
+
+      client.release()
+      return movie
+    } catch (error) {
+      console.error(`ERROR: ${error}`)
+      pool.end()
+    }
   }
 }
-
 export default Movie
