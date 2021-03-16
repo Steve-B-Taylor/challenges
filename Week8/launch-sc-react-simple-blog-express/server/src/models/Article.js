@@ -13,7 +13,7 @@ class Article {
   static findAll() {
     const articleData = JSON.parse(fs.readFileSync(articlesPath)).articles
     let articles = []
-    articleData.forEach(article => {
+    articleData.forEach((article) => {
       const newArticle = new Article(article)
       articles.push(newArticle)
     })
@@ -22,7 +22,7 @@ class Article {
 
   static findById(id) {
     const articleData = JSON.parse(fs.readFileSync(articlesPath)).articles
-    const myArticle = articleData.find(article => article.id == id)
+    const myArticle = articleData.find((article) => article.id == id)
     return new Article(myArticle)
   }
 
@@ -31,28 +31,30 @@ class Article {
     const requiredFields = ["title", "content"]
     let isValid = true
 
-    for(const requiredField of requiredFields) {
+    for (const requiredField of requiredFields) {
       this.errors[requiredField] = []
-      if(!this[requiredField]) {
+      if (!this[requiredField]) {
         isValid = false
         this.errors[requiredField].push("Can't be blank")
       }
     }
+    debugger
     return isValid
   }
 
   static getNextArticleId() {
-    const maxArticle = _.maxBy(this.findAll(), article => article.id)
+    const maxArticle = _.maxBy(this.findAll(), (article) => article.id)
     return maxArticle.id + 1
   }
 
   save() {
-    if(this.isValid()) {
+    if (this.isValid()) {
       delete this.errors
       this.id = this.constructor.getNextArticleId()
       const articles = this.constructor.findAll()
       articles.push(this)
       const data = { articles: articles }
+      console.log(data)
       fs.writeFileSync(articlesPath, JSON.stringify(data))
       return true
     } else {

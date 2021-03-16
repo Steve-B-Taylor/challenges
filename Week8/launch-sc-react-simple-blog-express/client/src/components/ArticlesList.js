@@ -3,16 +3,50 @@ import React, { useState, useEffect } from "react"
 import ArticleTile from "./ArticleTile"
 import ArticleForm from "./ArticleForm"
 
-const ArticlesList = props => {
+const ArticlesList = (props) => {
   const [articles, setArticles] = useState([])
 
-  // Fetch all articles
-
-  const addNewArticle = async formPayload => {
-    // FETCH POST LOGIC
+  const getArticles = async () => {
+    try {
+      const response = await fetch("/api/v1/articles")
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        const error = new Error(errorMessage)
+        throw error
+      }
+      const data = await response.json()
+      setArticles(data.articles)
+    } catch (err) {
+      console.error(`Error in fetch: ${err.message}`)
+    }
   }
 
-  const articleTiles = articles.map(article => {
+  useEffect(() => {
+    getArticles()
+  }, [])
+
+  const addNewArticle = async (formPayload) => {
+    try {
+      const response = await fetch("/api/v1/articles", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formPayload),
+      })
+      if (!response.ok) {
+        const errorMessage = `${response.status} (${response.statusText})`
+        throw new Error(errorMessage)
+      }
+      const body = await response.json()
+      debugger
+      setArticles([...articles, body.article])
+    } catch (error) {
+      console.error(`Error in Fetch: ${error.message}`)
+    }
+  }
+
+  const articleTiles = articles.map((article) => {
     return (
       <ArticleTile
         key={article.id}
@@ -28,8 +62,8 @@ const ArticlesList = props => {
       <div className="small-8 small-centered columns">
         <h1>My Blog!</h1>
         <hr />
-        {articleTiles}
         <ArticleForm addNewArticle={addNewArticle} />
+        {articleTiles}
       </div>
     </div>
   )

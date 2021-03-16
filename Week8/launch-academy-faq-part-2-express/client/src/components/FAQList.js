@@ -30,6 +30,10 @@ const FAQList = (props) => {
     }
   }
 
+  useEffect(() => {
+    getQuestions()
+  }, [])
+
   const postQuestion = async (formPayload) => {
     // debugger
     try {
@@ -51,10 +55,6 @@ const FAQList = (props) => {
       console.error(`Error in Fetch: ${error.message}`)
     }
   }
-
-  useEffect(() => {
-    getQuestions()
-  }, [])
 
   const questionListItems = questions.map((question) => {
     // console.log(`questionListItems: ${question}`)

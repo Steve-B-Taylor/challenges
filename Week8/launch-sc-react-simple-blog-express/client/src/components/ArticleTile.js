@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const ArticleTile = props => {
+const ArticleTile = (props) => {
   return (
     <div className="article-tile">
       <Link to={`/articles/${props.id}`}>
