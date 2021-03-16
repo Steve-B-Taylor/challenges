@@ -29,16 +29,6 @@
       "database": "movie-stars-pg",
       "username": "postgres",
       "password": "password"
-    },
-    {
-      "previewLimit": 50,
-      "server": "localhost",
-      "port": 5432,
-      "driver": "PostgreSQL",
-      "name": "launch_digital_library_development",
-      "database": "launch_digital_library_development",
-      "username": "postgres",
-      "password": "password"
     }
   ]
 }
