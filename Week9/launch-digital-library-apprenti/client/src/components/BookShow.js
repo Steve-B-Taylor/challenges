@@ -37,7 +37,7 @@ const BookShow = (props) => {
     <>
       <h1>{book.title}</h1>
       <h2>{book.author}</h2>
-      <h3>{book.pageCount} pages</h3>
+      <h3>{book.page_count} pages</h3>
       {descriptionSection}
       {fictionSection}
     </>

@@ -1,76 +1,89 @@
-import React, { useState } from "react"
-import { Redirect } from "react-router-dom"
+import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 
-import ErrorList from "./ErrorList"
+import ErrorList from "./ErrorList";
 
 const BookForm = (props) => {
   const [bookRecord, setBookRecord] = useState({
     title: "",
     author: "",
     description: "",
-    pageCount: "",
-    fiction: false
-  })
-  const [errors, setErrors] = useState([])
-  const [shouldRedirect, setShouldRedirect] = useState(false)
+    page_count: "",
+    fiction: false,
+  });
+  const [errors, setErrors] = useState([]);
+  const [shouldRedirect, setShouldRedirect] = useState(false);
 
   const addNewBook = async () => {
     try {
       const response = await fetch("/api/v1/books", {
         method: "POST",
         headers: new Headers({
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         }),
-        body: JSON.stringify(bookRecord)
-      })
+        body: JSON.stringify(bookRecord),
+      });
       if (!response.ok) {
-        if(response.status === 422) {
-          const body = await response.json()
-          return setErrors(body.errors)
+        if (response.status === 422) {
+          const body = await response.json();
+          return setErrors(body.errors);
         } else {
-          const errorMessage = `${response.status} (${response.statusText})`
-          const error = new Error(errorMessage)
-          throw(error)
+          const errorMessage = `${response.status} (${response.statusText})`;
+          const error = new Error(errorMessage);
+          throw error;
         }
       } else {
-        const body = await response.json()
+        const body = await response.json();
         console.log("Posted successfully!", body);
-        setShouldRedirect(true)
+        setShouldRedirect(true);
       }
-    } catch(err) {
-      console.error(`Error in fetch: ${err.message}`)
+    } catch (err) {
+      console.error(`Error in fetch: ${err.message}`);
     }
-  }
+  };
 
   const handleChange = (event) => {
-    const targetInput = event.currentTarget
-    let value
+    const targetInput = event.currentTarget;
+    let value;
 
     if (targetInput.type === "checkbox") {
-      value = targetInput.checked
+      value = targetInput.checked;
     } else {
-      value = targetInput.value
+      value = targetInput.value;
     }
 
     setBookRecord({
       ...bookRecord,
-      [event.currentTarget.name]: value
-    })
-  }
+      [event.currentTarget.name]: value,
+    });
+  };
+
+  doValidate = () => {
+    bookRecord.title.trim() !== "";
+    bookRecord.author.trim() !== "";
+    bookRecord.pages.trim() !== "";
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    addNewBook()
-  }
+    event.preventDefault();
+    addNewBook();
+  };
 
   if (shouldRedirect) {
-    return <Redirect to="/books" />
+    return <Redirect to="/books" />;
+    // } else {
+    //   return (
+    //     <div>
+    //       <ErrorList />
+    //     </div>
+    //   );
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <h1>Add a New Book</h1>
-      <label htmlFor="title">Title
+      <label htmlFor="title">
+        Title
         <input
           id="title"
           type="text"
@@ -80,7 +93,8 @@ const BookForm = (props) => {
         />
       </label>
 
-      <label htmlFor="author">Author
+      <label htmlFor="author">
+        Author
         <input
           id="author"
           type="text"
@@ -90,17 +104,19 @@ const BookForm = (props) => {
         />
       </label>
 
-      <label htmlFor="pageCount">Page Count
+      <label htmlFor="page_count">
+        Page Count
         <input
-          id="pageCount"
+          id="page_count"
           type="number"
-          name="pageCount"
+          name="page_count"
           onChange={handleChange}
-          value={bookRecord.pageCount}
+          value={bookRecord.page_count}
         />
       </label>
 
-      <label htmlFor="description">Description
+      <label htmlFor="description">
+        Description
         <textarea
           id="description"
           name="description"
@@ -109,7 +125,8 @@ const BookForm = (props) => {
         />
       </label>
 
-      <label htmlFor="fiction">Fiction?
+      <label htmlFor="fiction">
+        Fiction?
         <input
           id="fiction"
           type="checkbox"
@@ -121,7 +138,7 @@ const BookForm = (props) => {
 
       <input type="submit" value="Add this Book" />
     </form>
-  )
-}
+  );
+};
 
-export default BookForm
+export default BookForm;
