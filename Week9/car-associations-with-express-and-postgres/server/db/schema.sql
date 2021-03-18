@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS car_models CASCADE;
+CREATE TABLE car_models (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  car_make_id INTEGER REFERENCES car_makes(id)
+);
+DROP TABLE IF EXISTS car_makes CASCADE;
+CREATE TABLE car_makes (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
