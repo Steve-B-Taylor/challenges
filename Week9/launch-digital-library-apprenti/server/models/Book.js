@@ -1,5 +1,6 @@
 import pg from "pg";
 import _ from "lodash";
+import { json } from "body-parser";
 
 const pool = new pg.Pool({
   connectionString:
@@ -83,28 +84,29 @@ class Book {
     // if (this.isValid()) {
     try {
       const client = await pool.connect();
+
       let query =
-        "INSERT INTO books (title, author, page_count, description, fiction) VALUES ($1, $2, $3, $4, $5);";
-      await client.query(query, [
+        "INSERT INTO books (title, author, page_count, description, fiction) VALUES ($1, $2, $3, $4, $5) RETURNING id;";
+      const submitQuery = await client.query(query, [
         this.title,
         this.author,
         this.page_count,
         this.description,
         this.fiction,
       ]);
-      const result = await client.query(
-        "SELECT * FROM books ORDER BY id DESC LIMIT 1"
-      );
-      const newBookData = result.rows[0];
-      this.id = newBookData.id;
+
+      const returnId = JSON.stringify(submitQuery.rows[0].id);
+
+      this.id = returnId;
+
       //release the connection back to the pool
       client.release();
 
       return true;
     } catch (err) {
       console.log(err);
-      return false;
       pool.end();
+      return false;
     }
     // } else {
     //   return false;

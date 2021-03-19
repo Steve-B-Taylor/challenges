@@ -58,29 +58,49 @@ const BookForm = (props) => {
     });
   };
 
-  doValidate = () => {
-    bookRecord.title.trim() !== "";
-    bookRecord.author.trim() !== "";
-    bookRecord.pages.trim() !== "";
+  const clearForm = (event) => {
+    event.preventDefault();
+    setBookRecord({
+      title: "",
+      author: "",
+      page_count: "",
+      description: "",
+      fiction: false,
+    });
+    setErrors({});
+  };
+
+  const doValidate = () => {
+    let submitErrors = {};
+    const requiredFields = ["title", "author", "page_count"];
+    requiredFields.forEach((field) => {
+      if (bookRecord[field].trim() === "") {
+        submitErrors = {
+          ...submitErrors,
+          [field]: "is blank",
+        };
+      }
+    });
+    setErrors(submitErrors);
+    return _.isEmpty(submitErrors);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addNewBook();
+    if (doValidate()) {
+      addNewBook();
+    } else {
+      console.log(`Error:  ${errors}`);
+    }
   };
 
   if (shouldRedirect) {
     return <Redirect to="/books" />;
-    // } else {
-    //   return (
-    //     <div>
-    //       <ErrorList />
-    //     </div>
-    //   );
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      <ErrorList errors={errors} />
       <h1>Add a New Book</h1>
       <label htmlFor="title">
         Title
@@ -135,8 +155,12 @@ const BookForm = (props) => {
           value={bookRecord.fiction}
         />
       </label>
-
-      <input type="submit" value="Add this Book" />
+      <div>
+        <button className="button" onClick={clearForm}>
+          Clear
+        </button>
+        <input className="button" type="submit" value="Add this Book" />
+      </div>
     </form>
   );
 };
