@@ -3,6 +3,7 @@ package com.launchacademy.webGreeter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -21,4 +22,10 @@ public class GreetingsController {
     return "greetings/show";
   }
 
+  @GetMapping("/by-name/{name}")
+  public String getCustomizedGreeting(@PathVariable String name, Model model) {
+    model.addAttribute("greeting", "Hello from Spring, " + name);
+    return "greetings/show";
+  }
+  
 }

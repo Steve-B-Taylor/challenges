@@ -1,0 +1,3 @@
+Current Balance: 320
+Average Withdrawal: -175
+Largest deposit: 700

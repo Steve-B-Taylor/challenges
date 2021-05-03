@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS locations CASCADE;
+CREATE TABLE locations (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+DROP TABLE IF EXISTS adventures CASCADE;
+CREATE TABLE adventures (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  location_id INTEGER REFERENCES locations(id)
+);

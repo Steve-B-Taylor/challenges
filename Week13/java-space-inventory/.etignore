@@ -1,0 +1,5 @@
+# Files to ignore when uploading to Launch
+java-space-inventory.md
+java-space-inventory.iml
+pom.xml
+.idea

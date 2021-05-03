@@ -1,0 +1,2 @@
+ALTER TABLE cars
+ADD COLUMN make_id BIGINT NOT NULL REFERENCES makes(id);

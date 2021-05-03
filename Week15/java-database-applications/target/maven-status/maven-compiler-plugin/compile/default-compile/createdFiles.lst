@@ -1,0 +1,4 @@
+com\launchacademy\bookmarks\Bookmark.class
+com\launchacademy\bookmarks\BookmarksController.class
+com\launchacademy\bookmarks\BookmarkService.class
+com\launchacademy\bookmarks\EMFListener.class

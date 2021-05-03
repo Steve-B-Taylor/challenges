@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:32:58 -0700] "GET /bookmarks/new HTTP/1.1" 404 997 http-bio-8080-exec-1 46
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:34:32 -0700] "GET /bookmarks/new HTTP/1.1" 200 705 http-bio-8080-exec-4 656
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:45:52 -0700] "GET /bookmarks/new HTTP/1.1" 405 1065 http-bio-8080-exec-1 31
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:45:58 -0700] "GET /bookmarks/ HTTP/1.1" 404 971 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:46:03 -0700] "GET /bookmarks/new HTTP/1.1" 405 1065 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:50:28 -0700] "GET /bookmarks/new HTTP/1.1" 405 1065 http-bio-8080-exec-1 30
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:51:16 -0700] "GET /bookmarks HTTP/1.1" 405 1065 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:51:20 -0700] "GET / HTTP/1.1" 404 951 http-bio-8080-exec-6 4
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:59:46 -0700] "GET / HTTP/1.1" 200 46 http-bio-8080-exec-1 979
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:15:59:57 -0700] "GET /bookmarks HTTP/1.1" 200 - http-bio-8080-exec-3 1
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:00:03 -0700] "GET /bookmarks/new HTTP/1.1" 200 705 http-bio-8080-exec-5 113
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:00:20 -0700] "POST /bookmarks HTTP/1.1" 405 1067 http-bio-8080-exec-7 1
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:19:04 -0700] "POST /bookmarks HTTP/1.1" 405 1067 http-bio-8080-exec-1 36
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:19:08 -0700] "GET /bookmarks/new HTTP/1.1" 200 705 http-bio-8080-exec-4 116
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:19:26 -0700] "POST /bookmarks HTTP/1.1" 405 1067 http-bio-8080-exec-7 1
+0:0:0:0:0:0:0:1 - - [27/Apr/2021:16:22:55 -0700] "GET /favicon.ico HTTP/1.1" 200 - http-bio-8080-exec-1 38

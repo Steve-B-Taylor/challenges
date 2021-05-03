@@ -1,0 +1,19 @@
+--DROP TABLE IF EXISTS products CASCADE;
+--CREATE TABLE products (
+--  id SERIAL PRIMARY KEY,
+--  name VARCHAR(255) NOT NULL,
+--  price DOUBLE PRECISION NOT NULL,
+--  url VARCHAR(255)
+--);
+CREATE TABLE categories (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE products (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price DOUBLE PRECISION NOT NULL,
+  url VARCHAR(255),
+  categories_id INTEGER REFERENCES categories(id)
+);

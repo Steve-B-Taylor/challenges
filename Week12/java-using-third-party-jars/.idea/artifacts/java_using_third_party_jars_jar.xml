@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="java-using-third-party-jars:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/java_using_third_party_jars_jar</output-path>
+    <root id="root">
+      <element id="archive" name="java-using-third-party-jars.jar">
+        <element id="module-output" name="java-using-third-party-jars" />
+      </element>
+      <element id="library" level="project" name="jansi-2.3.2" />
+    </root>
+  </artifact>
+</component>

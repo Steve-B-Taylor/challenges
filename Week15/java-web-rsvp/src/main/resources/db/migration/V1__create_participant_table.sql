@@ -1,0 +1,8 @@
+CREATE TABLE participants (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  phone VARCHAR(255) NOT NULL UNIQUE,
+  contact_method VARCHAR(5) NOT NULL
+);

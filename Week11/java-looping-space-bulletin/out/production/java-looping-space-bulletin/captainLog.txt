@@ -1,0 +1,7 @@
+asdasdasdasd
+this is a test
+Just trying some stuff out
+adding some more stuff
+I wonder if this works
+adding another new message
+testing if I actually need to set continueWriting = false;

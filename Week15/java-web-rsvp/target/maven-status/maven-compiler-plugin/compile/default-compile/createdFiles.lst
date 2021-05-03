@@ -1,0 +1,4 @@
+com\launchacademy\events\EMFListener.class
+com\launchacademy\events\EventsController.class
+com\launchacademy\events\EventService.class
+com\launchacademy\events\Event.class

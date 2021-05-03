@@ -1,0 +1,6 @@
+# Files to ignore when uploading to Launch
+java-hashmap-manifest.md
+.idea
+java-hashmap-manifest.iml
+pom.xml
+target

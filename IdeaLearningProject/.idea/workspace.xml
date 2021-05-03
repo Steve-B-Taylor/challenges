@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8476a23a-ff16-4d65-8cf4-604b88262321" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week11/Week11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/.etignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/adventures.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/public/bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/public/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/assets/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/AdventureShow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/AdventureTile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/AdventuresList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/ErrorList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/LocationShow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/components/NewAdventureForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/client/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/launch-sc-monolith-node-and-sql-apprenti.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/bin/seed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/db/Seeder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/db/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/models/Adventure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/models/Location.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/routes/api/v1/adventuresRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/routes/api/v1/locationsRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/routes/clientRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/routes/rootRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/views/home.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/server/views/layouts/default.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Week9/launch-sc-monolith-node-and-sql-apprenti/webpack.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qP8TzBIC8QmlCjkYHZFzGx26s8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="LEARNING_PROJECT_MODIFICATION" value="1616969878365" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8476a23a-ff16-4d65-8cf4-604b88262321" name="Default Changelist" comment="" />
+      <created>1616969877689</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616969877689</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

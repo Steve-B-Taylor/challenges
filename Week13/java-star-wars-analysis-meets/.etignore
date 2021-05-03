@@ -1,0 +1,7 @@
+# Files to ignore when uploading to Launch
+java-star-wars-analysis.md
+.idea
+java-star-wars-analysis.iml
+pom.xml
+target
+.gitkeep

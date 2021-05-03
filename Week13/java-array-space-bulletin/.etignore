@@ -1,0 +1,5 @@
+# Files to ignore when uploading to Launch
+java-array-space-bulletin.iml
+java-array-space-bulletin.md
+target
+pom.xml

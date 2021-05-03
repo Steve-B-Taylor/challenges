@@ -1,0 +1,9 @@
+# Files to ignore when uploading to Launch
+java-smart-home-part-1.md
+java-smart-home-pt-1.iml
+.classpath
+.idea
+.project
+.settings
+pom.xml
+target

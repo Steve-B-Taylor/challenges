@@ -1,0 +1,4 @@
+Car Purchased for: 322
+Current Balance: 3
+Average Withdrawal: -130
+Largest deposit: 500

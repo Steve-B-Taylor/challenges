@@ -1,0 +1,5 @@
+# Files to ignore when uploading to Launch
+java-oo-marathon.md
+java-oo-marathon.iml
+.idea
+target

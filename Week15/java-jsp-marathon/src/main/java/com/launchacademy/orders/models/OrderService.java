@@ -1,6 +1,8 @@
 package com.launchacademy.orders.models;
 
+import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 public class OrderService {
   private EntityManager em;
@@ -23,4 +25,15 @@ public class OrderService {
     }
   }
 
+  public List<Order> findAll() {
+    TypedQuery<Order> query = em.createQuery("SELECT o FROM Order o", Order.class);
+    return query.getResultList();
+  }
+
+  public Order findOne(Long id) {
+    TypedQuery<Order> query = em.createQuery("SELECT o FROM Order o WHERE id = :id", Order.class);
+    query.setParameter("id", id);
+    return query.getSingleResult();
+
+  }
 }
