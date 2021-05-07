@@ -1,0 +1,17 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+<body>
+<div class="product" th:object="${product}">
+  <dl>
+    <h1>
+      <dt th:text="*{name}"></dt>
+    </h1>
+    <dt th:text="'Price: $' + *{price}" class="price"></dt>
+    <dt th:text="'Description: ' + *{description}" class="description"></dt>
+    <dt th:text="'Caffeine Rating: ' + *{caffeineRating}"></dt>
+    <a href="/products">Back to the lobby</a>
+  </dl>
+</div>
+<hr>
+
+</body>
+</html>

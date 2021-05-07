@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>Curling Teams</h1>
+<ul>
+  <div th:each="team, iter : ${teams}">
+  <li>
+    <a href="@{/teams/{index}(index=${iter.index})}"><span th:text=""*{teamName}></span></a>
+  </li>
+  </div>
+</ul>
+</body>
+</html>
