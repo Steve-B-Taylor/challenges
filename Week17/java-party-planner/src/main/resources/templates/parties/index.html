@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Party Planner</h1>
+
+<div class="parties" th:each="party : ${parties}">
+  <div class="party" th:object="${party}">
+    <h2 th:if="*{not #strings.isEmpty(description)}" th:text="*{description}"></h2>
+    <dl>
+      <dt>Location</dt>
+      <dd th:text="*{location}"></dd>
+    </dl>
+  </div>
+</div>
+
+
+<p><a th:href="@{/new}">&plus; Add a New Party</a></p>
+</body>
+</html>

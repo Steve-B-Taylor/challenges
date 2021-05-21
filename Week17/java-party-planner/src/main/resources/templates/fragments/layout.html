@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html th:fragment="layout (template)">
+<head>
+  <title>Thymeleaf</title>
+  <style>
+        .party {
+          color: orange;
+        }
+      </style>
+</head>
+<body>
+<th:block th:include="${template}"/>
+</body>
+</html>

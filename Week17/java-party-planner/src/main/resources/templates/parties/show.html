@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+
+<body>
+<div class="party" th:object="${party}">
+<h1 th:text="*{name}"></h1>
+  <h2 th:if="*{not #strings.isEmpty(description)}" th:text="*{description}"></h2>
+  <dl>
+    <dt>Location</dt>
+    <dd th:text="*{location}"></dd>
+  </dl>
+</div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+      th:replace="~{fragments/layout :: layout (~{::body})}">
+<body>
+<h1>Party Planner</h1>
+
+<div th:each="friend : ${friends}">
+  <div th:object="${friend}">
+    <a th:href="@{/friends/show/{id}(id=*{id})}" th:text="*{name}" > </a>
+  </div>
+</div>
+
+<p><a th:href="@{/new}">&plus; Add a New Friend</a></p>
+</body>
+</html>
